@@ -8,7 +8,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Increment version
-      id: current_version   
+      id: version   
       uses: vinodhraj/Bump-N-Tag-Version@master
       with:
         file_name: 'verstion.txt'
