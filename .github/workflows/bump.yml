@@ -1,4 +1,4 @@
-name: Bump
+name: Increment Version
 on: [push]  # Recommended to use either of one event
 
 jobs:
@@ -8,10 +8,10 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Increment version
-      id: version   
+      id: current_version   
       uses: vinodhraj/Bump-N-Tag-Version@master
       with:
         file_name: 'verstion.txt'
-        tag_version: "true"
+        tag_version: "false"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
