@@ -1,17 +1,17 @@
 name: Bump
-
-on: [push]
+on: [push]  # Recommended to use either of one event
 
 jobs:
-  build:
-
+  Version-check:
     runs-on: ubuntu-latest
-
+    name: Bump-N-Tag Version
     steps:
-    - uses: actions/checkout@v1
-    - name: Run a one-line script
-      run: echo Hello, world!
-    - name: Run a multi-line script
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+    - uses: actions/checkout@master
+    - name: Increment version
+      id: version   
+      uses: vinodhraj/Bump-N-Tag-Version@master
+      with:
+        file_name: './VERSION'
+        tag_version: "true"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
