@@ -9,7 +9,7 @@ jobs:
     - uses: actions/checkout@master
     - name: Increment version
       id: version   
-      uses: vinodhraj/Bump-N-Tag-Version@master
+      uses: jLynx/Bump-N-Tag-Version@master
       with:
         file_name: 'version.txt'
         tag_version: "true"
