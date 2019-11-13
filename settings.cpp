@@ -13,7 +13,7 @@
 #include "debug.h"
 
 #define SETTINGS_ADDRES 1
-#define SETTINGS_MAGIC_NUM 1234567891
+#define SETTINGS_MAGIC_NUM 1234567898
 #define VERSION 1.2.4.56
 
 namespace settings {
