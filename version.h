@@ -1,1 +1,1 @@
-#define VERSION 1.2.4.56
+#define CURRENT_VERSION 1.2.4.56
